@@ -1,0 +1,7 @@
+services:
+  flask-app:
+    image: emmxy02/my-image:latest
+    container_name: flask-app
+    restart: unless-stopped
+    ports:
+      - "5000:8080"
