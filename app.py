@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-   return "Hello CICD World!"
+   return "Hello CI/CD Version 2!"
 
 import os
 
