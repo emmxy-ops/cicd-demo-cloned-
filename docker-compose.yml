@@ -3,5 +3,12 @@ services:
     image: emmxy02/my-image:latest
     container_name: flask-app
     restart: unless-stopped
+
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    restart: unless-stopped
     ports:
-      - "5000:8080"
+      - "80:80"
+    depends_on:
+      - flask-app
